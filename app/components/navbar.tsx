@@ -67,7 +67,7 @@ export default function NavBar() {
                 </div>
             </div>
 
-            <div className={`${isOpen && scrollDirection === 'up' ? 'translate-y-0' : '-translate-y-full'} fixed top-0 left-0 right-0 bottom-0 bg-background transition-transform duration-300 pt-16 px-2 lg:hidden`}>
+            <div className={`${isOpen && scrollDirection === 'up' ? 'translate-y-0' : '-translate-y-full'} fixed top-0 left-0 right-0 bottom-0 bg-background transition-transform duration-300 pt-16 px-2 lg:hidden md:px-10`}>
                 <nav className='flex flex-col'>
                     <a href='#shop' className={`${WhyteInkTrap.className} text-5xl mb-5`} onClick={handleLinkClick}>Shop</a>
                     <a href='#about' className={`${WhyteInkTrap.className} text-5xl`} onClick={handleLinkClick}>About</a>
