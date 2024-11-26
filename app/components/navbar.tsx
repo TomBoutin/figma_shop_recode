@@ -6,7 +6,7 @@ import { WhyteInkTrap } from '../fonts/font'
 
 export default function NavBar() {
     const [isOpen, setOpen] = useState(false)
-    const [navColor, setNavColor] = useState('bg-primary')
+    const [navColor, setNavColor] = useState('bg-none')
     const [scrollDirection, setScrollDirection] = useState('up')
 
     useEffect(() => {
