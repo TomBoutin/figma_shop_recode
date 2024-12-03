@@ -1,10 +1,13 @@
-"use client"
+"use client";
 
-import { useRef } from "react";
-import { motion, useAnimate } from "motion/react";
+import Card from "@/app/components/CardCarousel";
+import { animate, motion, useMotionValue } from "framer-motion";
+import { useEffect, useState } from "react";
+import useMeasure from "react-use-measure";
 import Image from "next/image";
 
-const images = [
+export default function Home() {
+  const images = [
     "/Chill-guy.webp",
     "/image_illu_carousel_1.webp",
     "/image_illu_carousel_2.webp",
@@ -16,27 +19,27 @@ const images = [
     "/image_illu_carousel_8.webp",
     "/image_illu_carousel_9.webp",
     "/image_illu_carousel_10.webp",
-]
-
-export default function Carousel () {
-    const carouselRef = useRef<HTMLDivElement>(null);
-    const [scope, animate] = useAnimate()
+  ];
   
-    return (
-      <div className="overflow-hidden relative" ref={carouselRef}>
-        <motion.div
-          className="flex"
-          drag="x"
-          dragConstraints={carouselRef}
-          
-        >
-          {images.map((src, index) => (
-            <motion.div key={index} className="min-w-[50%]">
-              <Image src={src} alt={`Image ${index + 1}`} width={500} height={500} />
-            </motion.div>
-          ))}
+  return (
+    <main className="py-8">
+      <motion.div className="carousel cursor-grab overflow-hidden">
+        <motion.div drag="x" className="inner-carousel flex">
+          {images.map(image => {
+            return(
+              <motion.div className="item min-h-96 min-w-64 p-1">
+                <Image 
+                src={image} 
+                alt={image}
+                width={300}
+                height={300}
+                className="rounded-lg w-full h-full object-cover"
+                />
+              </motion.div>
+            ) 
+          })}
         </motion.div>
-      </div>
-    );
-  };
-  
+      </motion.div>
+    </main>
+  );
+}
