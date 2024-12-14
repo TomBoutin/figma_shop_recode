@@ -11,6 +11,17 @@
     --foreground: hsl(0, 0%, 0%);
 
   }
+
+  /* Carousel Custom CSS */
+  .react-multi-carousel-item {
+    cursor: pointer;
+  }
+
+  .react-multi-carousel-item:hover .button-carousel {
+    opacity: 100;
+  }
+
+  
 }
 
 
