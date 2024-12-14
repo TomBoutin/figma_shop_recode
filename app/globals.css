@@ -9,11 +9,11 @@
     
     --background: hsl(0, 0%, 100%);
     --foreground: hsl(0, 0%, 0%);
-
+    --border: #f24e1e;
   }
 
   /* Carousel Custom CSS */
-  .react-multi-carousel-item {
+  .carousel-container {
     cursor: pointer;
   }
 
@@ -21,6 +21,14 @@
     opacity: 100;
   }
 
+  /* @keyframes scroll {
+    0% {
+      transform: translateX(0);
+    }
+    100% {
+      transform: translateX(-50%);
+    }
+  } */
   
 }
 

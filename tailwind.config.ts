@@ -16,6 +16,28 @@ export default {
       },
       animation: {
         'spin-slow': 'spin 10s linear infinite',
+        'scroll-1': 'scroll-1 15s linear infinite',
+        'scroll-2': 'scroll-2 15s linear infinite',
+      },
+      screens: {
+        '3xl': '1920px',
+        '4xl': '2560px',
+      },
+      maxWidth: {
+        '8xl': '90rem',
+        '9xl': '100rem',
+        '10xl': '110rem',
+        '11xl': '120rem',
+      },
+      keyframes: {
+        "scroll-1": {
+          '0%': { transform: 'translateX(0)' },
+          '100%': { transform: 'translateX(-100%)' },
+        },
+        "scroll-2": {
+          '0%': { transform: 'translateX(100%)' },
+          '100%': { transform: 'translateX(0)' },
+        }
       }
     },
   },

@@ -4,7 +4,7 @@ import { useRef, useEffect } from "react";
 import Carousel from 'react-multi-carousel';
 import 'react-multi-carousel/lib/styles.css';
 
-const CustomLeftArrow = ({ onClick }) => {
+const CustomLeftArrow = ({ onClick }: { onClick: () => void }) => {
   return (
     <button onClick={onClick} className="absolute left-0 top-0 bottom-0 z-10 pl-5 pr-20 rounded-full group">
       <svg className="svg-arrow opacity-0 group-hover:opacity-100 transition-all" width="25" height="20" viewBox="0 0 25 20" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -14,7 +14,7 @@ const CustomLeftArrow = ({ onClick }) => {
   );
 };
 
-const CustomRightArrow = ({ onClick }) => {
+const CustomRightArrow = ({ onClick }: { onClick: () => void }) => {
   return (
     <button onClick={onClick} className="absolute right-0 top-0 bottom-0 z-10 pr-5 pl-20 rounded-full group">
       <svg className="svg-arrow opacity-0 group-hover:opacity-100 transition-all" width="25" height="20" viewBox="0 0 25 20" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -64,8 +64,8 @@ export default function Home() {
         removeArrowOnDeviceType={["tablet", "mobile"]}
         dotListClass="custom-dot-list-style"
         itemClass="carousel-item-padding-40-px"
-        customLeftArrow={<CustomLeftArrow />}
-        customRightArrow={<CustomRightArrow />}
+        customLeftArrow={<CustomLeftArrow onClick={() => {}} />}
+        customRightArrow={<CustomRightArrow onClick={() => {}} />}
       >
         {images.map((image, index) => (
           <div key={index} className="relative p-2 w-full select-none pointer-events-none group">
