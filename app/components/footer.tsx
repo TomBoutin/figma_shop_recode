@@ -174,11 +174,16 @@ export default function Footer() {
           <li className="transition-all hover:underline cursor-pointer w-fit"><a href="https://www.instagram.com/figma/" target="_blank">Instagram</a></li>
           <li className="transition-all hover:underline cursor-pointer w-fit"><a href="https://www.youtube.com/c/Figmadesign" target="_blank">Youtube</a></li>
         </motion.ul>
-        <a href="#header">
+        <motion.a href="#header" 
+        viewport={{ once: true, amount: 1 }}
+        initial={{ opacity: 0, translateY: 20 }}
+        whileInView={{ translateY: 0, opacity: 1 }}
+        // animate={{ opacity: 1, translateY: 0 }}
+        transition={{ delay: 0.8, duration: 0.2 }}>
           <svg className="absolute right-10 bottom-20 text-black cursor-pointer hover:text-white" width="50" height="50" viewBox="0 0 50 50" fill="none" xmlns="http://www.w3.org/2000/svg">
             <path fillRule="evenodd" clipRule="evenodd" d="M25 50C38.8071 50 50 38.8071 50 25C50 11.1929 38.8071 0 25 0C11.1929 0 0 11.1929 0 25C0 38.8071 11.1929 50 25 50ZM26.136 37.416H23.064L23.064 18.792C22.168 19.72 21.304 20.584 20.408 21.48L17.144 24.776L15 22.6L24.6 13L34.2 22.6L32.056 24.776L28.824 21.48C28.5254 21.1814 28.2267 20.8863 27.9281 20.5912C27.3307 20.0009 26.7334 19.4107 26.136 18.792V37.416Z" fill="currentColor"></path>
           </svg>
-        </a>
+        </motion.a>
         <div className="text-2xl uppercase font-bold flex whitespace-nowrap items-center">
           <div className="animate-scroll-1 flex items-center absolute bottom-0">
             <span className="leading-tight">Figma's</span>
