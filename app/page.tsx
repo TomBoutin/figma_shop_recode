@@ -1,6 +1,9 @@
+"use client";
+
 import Image from "next/image";
 import Carousel from "./components/carousel";
 import { WhyteInkTrap } from "@/app/fonts/font";
+import { motion } from "framer-motion";
 
 export default function Home() {
   return (
@@ -45,7 +48,12 @@ export default function Home() {
         <div
           className={`${WhyteInkTrap.className} mx-3 md:mx-36 lg:mx-48 group text-2xl md:text-4xl lg:text-5xl 3xl:text-6xl 4xl:text-7xl font-bold uppercase pt-16 lg:pt-28 pb-16`}
         >
-          <h2 className="leading-6 md:leading-none lg:leading-tight text-center cursor-default">
+          <motion.h2 className="leading-6 md:leading-none lg:leading-tight text-center cursor-default"
+          viewport={{ once: true, amount: 0.7 }}
+          initial={{ opacity: 0, translateY: 20 }}
+          whileInView={{ translateY: 0, opacity: 1 }}
+          // animate={{ opacity: 1, translateY: 0 }}
+          transition={{ delay: 0, duration: 0.2 }}>
             <span className="group-hover:opacity-60 transition-all">
               Figma's
             </span>{" "}
@@ -120,7 +128,7 @@ export default function Home() {
             <span className="group-hover:opacity-60 transition-all">
               friends
             </span>
-          </h2>
+          </motion.h2>
         </div>
       </div>
     </>
