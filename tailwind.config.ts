@@ -38,6 +38,23 @@ export default {
           '0%': { transform: 'translateX(100%)' },
           '100%': { transform: 'translateX(0)' },
         }
+      },
+      borderRadius: {
+        '4xl': '2rem',
+        '5xl': '2.5rem',
+        '6xl': '3rem',
+        '7xl': '3.5rem',
+        '8xl': '4rem',
+        '9xl': '4.5rem',
+        '10xl': '5rem',
+      },
+      spacing: {
+        '100': '25rem',
+        '110': '27.5rem',
+        '120': '62.5rem',
+
+
+
       }
     },
   },

@@ -4,6 +4,7 @@ import Image from "next/image";
 import Carousel from "./components/carousel";
 import { WhyteInkTrap } from "@/app/fonts/font";
 import { motion } from "framer-motion";
+import Products from "./components/products";
 
 export default function Home() {
   return (
@@ -46,9 +47,9 @@ export default function Home() {
 
       <div className="max-w-11xl mx-auto">
         <div
-          className={`${WhyteInkTrap.className} mx-3 md:mx-36 lg:mx-48 group text-2xl md:text-4xl lg:text-5xl 3xl:text-6xl 4xl:text-7xl font-bold uppercase pt-16 lg:pt-28 pb-16`}
+          className={`${WhyteInkTrap.className} mx-3 md:mx-36 lg:mx-48 group text-2xl md:text-4xl lg:text-5xl 2xl:text-6xl 4xl:text-7xl font-bold uppercase pt-16 lg:pt-28 pb-16 tracking-wide`}
         >
-          <motion.h2 className="leading-6 md:leading-none lg:leading-tight text-center cursor-default"
+          <motion.h2 className="leading-6 md:leading-none lg:leading-tight text-center cursor-default flex items-center justify-center flex-wrap"
           viewport={{ once: true, amount: 0.7 }}
           initial={{ opacity: 0, translateY: 20 }}
           whileInView={{ translateY: 0, opacity: 1 }}
@@ -62,7 +63,7 @@ export default function Home() {
               alt="Burst"
               width={50}
               height={50}
-              className="inline-block w-7 lg:w-10 mx-1 md:mx-2"
+              className="inline-block w-7 lg:w-10 mx-1 md:mx-3"
             />{" "}
             <span className="group-hover:opacity-60 transition-all">
               collection
@@ -72,7 +73,7 @@ export default function Home() {
               alt="Hourglass"
               width={50}
               height={50}
-              className="inline-block w-7 lg:w-10 mx-1 md:mx-2"
+              className="inline-block w-7 lg:w-10 mx-1 md:mx-3"
             />{" "}
             <span className="group-hover:opacity-60 transition-all">of</span>{" "}
             <span className="underline cursor-pointer">layers</span>{" "}
@@ -81,7 +82,7 @@ export default function Home() {
               alt="zag"
               width={50}
               height={50}
-              className="inline-block w-7 lg:w-10 mx-1 md:mx-2"
+              className="inline-block w-7 lg:w-10 mx-1 md:mx-3"
             />{" "}
             <span className="group-hover:opacity-60 transition-all">and</span>{" "}
             <Image
@@ -89,7 +90,7 @@ export default function Home() {
               alt="dots"
               width={50}
               height={50}
-              className="inline-block w-7 lg:w-10 mx-1 md:mx-2"
+              className="inline-block w-7 lg:w-10 mx-1 md:mx-3"
             />{" "}
             <span className="underline cursor-pointer">components</span>{" "}
             <Image
@@ -97,7 +98,7 @@ export default function Home() {
               alt="sun"
               width={50}
               height={50}
-              className="inline-block w-7 lg:w-10 mx-1 md:mx-2"
+              className="inline-block w-7 lg:w-10 mx-1 md:mx-3"
             />{" "}
             <span className="group-hover:opacity-60 transition-all">
               for you{" "}
@@ -107,7 +108,7 @@ export default function Home() {
               alt="comet"
               width={50}
               height={50}
-              className="inline-block w-7 lg:w-10 mx-1 md:mx-2"
+              className="inline-block w-7 lg:w-10 mx-1 md:mx-3"
             />{" "}
             <span className="group-hover:opacity-60 transition-all">and</span>{" "}
             <Image
@@ -115,7 +116,7 @@ export default function Home() {
               alt="snake"
               width={50}
               height={50}
-              className="inline-block w-7 lg:w-10 mx-1 md:mx-2"
+              className="inline-block w-7 lg:w-10 mx-1 md:mx-3"
             />{" "}
             <span className="group-hover:opacity-60 transition-all">your</span>{" "}
             <Image
@@ -123,13 +124,15 @@ export default function Home() {
               alt="tri"
               width={50}
               height={50}
-              className="inline-block w-7 lg:w-10 mx-1 md:mx-2"
+              className="inline-block w-7 lg:w-10 mx-1 md:mx-3"
             />{" "}
             <span className="group-hover:opacity-60 transition-all">
               friends
             </span>
           </motion.h2>
         </div>
+
+        <Products />
       </div>
     </>
   );
