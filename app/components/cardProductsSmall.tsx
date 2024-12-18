@@ -38,8 +38,8 @@ export default function CardProductSmall({ image, imageHover, title, price, nouv
     }, []);
 
     return (
-        <div className="w-fit cursor-pointer group">
-            <div className="relative h-96 rounded-5xl overflow-hidden border-2 border-transparent group-hover:border-black transition-all">
+        <div className="w-fit cursor-pointer group mx-auto">
+            <div className="relative w-full max-w-64 rounded-5xl overflow-hidden border-2 border-transparent group-hover:border-black transition-all">
                 {selectedPattern && (
                     <Image 
                         src={selectedPattern}

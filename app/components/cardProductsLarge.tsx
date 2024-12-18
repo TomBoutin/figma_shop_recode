@@ -38,8 +38,8 @@ export default function CardProductLarge({ image, imageHover, title, price, nouv
     }, []);
 
     return (
-        <div className="w-fit cursor-pointer group">
-            <div className="relative h-110 aspect-square rounded-5xl overflow-hidden border-2 border-transparent group-hover:border-black transition-all">
+        <div className="w-full cursor-pointer group sm:col-span-2 mx-auto justify-items-center">
+            <div className="relative w-full  aspect-square rounded-5xl overflow-hidden border-2 border-transparent group-hover:border-black transition-all">
                 {selectedPattern && (
                     <Image 
                         src={selectedPattern}
@@ -66,7 +66,7 @@ export default function CardProductLarge({ image, imageHover, title, price, nouv
                     />
                 )}
             </div>
-            <div className="flex justify-between items-start mt-3 max-w-110">
+            <div className="flex justify-between items-start mt-3 max-w-110 w-full">
                 <div>
                     {nouveau && (
                         <p className="leading-3 md:text-2xl">New!</p>
