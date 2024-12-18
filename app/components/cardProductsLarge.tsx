@@ -1,5 +1,6 @@
 import { useState, useEffect } from "react";
 import Image from "next/image";
+import { useMemo } from "react";
 
 interface CardProductSmallProps {
     image: string;
@@ -10,32 +11,39 @@ interface CardProductSmallProps {
 }
 
 export default function CardProductLarge({ image, imageHover, title, price, nouveau }: CardProductSmallProps) {
-    const patterns = [
-        "/pattern/pattern-1.webp",
-        "/pattern/pattern-2.webp",
-        "/pattern/pattern-3.webp",
-        "/pattern/pattern-4.webp",
-        "/pattern/pattern-5.webp",
-        "/pattern/pattern-6.webp",
-        "/pattern/pattern-7.webp",
-        "/pattern/pattern-8.webp",
-        "/pattern/pattern-9.webp",
-        "/pattern/pattern-10.webp",
-        "/pattern/pattern-11.webp",
-        "/pattern/pattern-12.webp",
-        "/pattern/pattern-13.webp",
-        "/pattern/pattern-14.webp",
-        "/pattern/pattern-15.webp",
-        "/pattern/pattern-16.webp",
-        "/pattern/pattern-17.webp",
-    ];
+    // const patterns = [
+
+    // ];
 
     const [selectedPattern, setSelectedPattern] = useState<string | null>(null);
 
+    const patterns = useMemo(() => {
+        // Initialize patterns array here
+        return [
+            "/pattern/pattern-1.webp",
+            "/pattern/pattern-2.webp",
+            "/pattern/pattern-3.webp",
+            "/pattern/pattern-4.webp",
+            "/pattern/pattern-5.webp",
+            "/pattern/pattern-6.webp",
+            "/pattern/pattern-7.webp",
+            "/pattern/pattern-8.webp",
+            "/pattern/pattern-9.webp",
+            "/pattern/pattern-10.webp",
+            "/pattern/pattern-11.webp",
+            "/pattern/pattern-12.webp",
+            "/pattern/pattern-13.webp",
+            "/pattern/pattern-14.webp",
+            "/pattern/pattern-15.webp",
+            "/pattern/pattern-16.webp",
+            "/pattern/pattern-17.webp",
+        ]; // Replace with actual initialization
+    }, []);
+    
     useEffect(() => {
-            const randomPattern = patterns[Math.floor(Math.random() * patterns.length)];
-            setSelectedPattern(randomPattern);
-        }, [patterns]);
+        const randomPattern = patterns[Math.floor(Math.random() * patterns.length)];
+        setSelectedPattern(randomPattern);
+    }, [patterns]);
 
     return (
         <div className="w-full cursor-pointer group sm:col-span-2 mx-auto justify-items-center">
