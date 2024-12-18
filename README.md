@@ -6,4 +6,4 @@ Sur le modèle du site front end practice qui vous propose de recréer des pages
 
 [Figma Shop](https://www.frontendpractice.com/projects/figma)
 
-[Icons](https://boxicons.com/)
+[Recode](https://figma-shop-recode.vercel.app/)
