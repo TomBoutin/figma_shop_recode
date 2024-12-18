@@ -35,7 +35,7 @@ export default function CardProductSmall({ image, imageHover, title, price, nouv
     useEffect(() => {
         const randomPattern = patterns[Math.floor(Math.random() * patterns.length)];
         setSelectedPattern(randomPattern);
-    }, []);
+    }, [patterns]);
 
     return (
         <div className="w-fit cursor-pointer group mx-auto">
@@ -54,7 +54,7 @@ export default function CardProductSmall({ image, imageHover, title, price, nouv
                     alt={title}
                     width={300}
                     height={300}
-                    className="relative group-hover:opacity-0 transition-all duration-300 h-full w-full object-cover"
+                    className="relative group-hover:opacity-0 transition-all duration-300 h-full w-full object-cover self-center"
                 />
                 {imageHover && (
                     <Image
@@ -62,7 +62,7 @@ export default function CardProductSmall({ image, imageHover, title, price, nouv
                         alt={title}
                         width={300}
                         height={300}
-                        className="absolute inset-0 opacity-0 group-hover:opacity-100 transition-opacity duration-300"
+                        className="absolute inset-0 opacity-0 group-hover:opacity-100 transition-opacity duration-300 self-center"
                     />
                 )}
             </div>

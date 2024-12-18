@@ -3,6 +3,7 @@
 import { Squash as Hamburger } from 'hamburger-react'
 import { useState, useEffect } from 'react'
 import { WhyteInkTrap } from '../fonts/font'
+import Link from 'next/link'
 
 export default function NavBar() {
     const [isOpen, setOpen] = useState(false)
@@ -46,16 +47,16 @@ export default function NavBar() {
                     </div>
 
                     <div className='hidden lg:flex gap-4'>
-                        <a href='#shop' className='py-1 px-5 rounded-full border-2 border-foreground font-semibold text-sm uppercase hover:bg-foreground hover:text-background transition-all'>Shop</a>
-                        <a href='' className='py-1 px-5 rounded-full border-2 border-foreground font-semibold text-sm uppercase hover:bg-foreground hover:text-background transition-all'>About</a>
+                        <Link href='#shop' className='py-1 px-5 rounded-full border-2 border-foreground font-semibold text-sm uppercase hover:bg-foreground hover:text-background transition-all'>Shop</Link>
+                        <Link href='' className='py-1 px-5 rounded-full border-2 border-foreground font-semibold text-sm uppercase hover:bg-foreground hover:text-background transition-all'>About</Link>
                     </div>
 
                     <svg className='hover:opacity-70 cursor-pointer' xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24"><path d="M10 18a7.952 7.952 0 0 0 4.897-1.688l4.396 4.396 1.414-1.414-4.396-4.396A7.952 7.952 0 0 0 18 10c0-4.411-3.589-8-8-8s-8 3.589-8 8 3.589 8 8 8zm0-14c3.309 0 6 2.691 6 6s-2.691 6-6 6-6-2.691-6-6 2.691-6 6-6z"></path></svg>
                 </div>
 
-                <a href='/' className='font-black text-center absolute left-1/2 -translate-x-1/2'>
+                <Link href='/' className='font-black text-center absolute left-1/2 -translate-x-1/2'>
                     THE FIGMA STORE
-                </a>
+                </Link>
 
                 <div className='flex items-center gap-3'>
                     <svg className='hover:opacity-70 cursor-pointer' xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path d="M12 2a5 5 0 1 0 5 5 5 5 0 0 0-5-5zm0 8a3 3 0 1 1 3-3 3 3 0 0 1-3 3zm9 11v-1a7 7 0 0 0-7-7h-4a7 7 0 0 0-7 7v1h2v-1a5 5 0 0 1 5-5h4a5 5 0 0 1 5 5v1z"></path></svg>
@@ -69,14 +70,14 @@ export default function NavBar() {
 
             <div className={`${isOpen && scrollDirection === 'up' ? 'translate-y-0' : '-translate-y-full'} fixed top-0 left-0 right-0 bottom-0 bg-background transition-transform duration-300 pt-16 px-2 lg:hidden md:px-10 z-40`}>
                 <nav className='flex flex-col'>
-                    <a href='#shop' className={`${WhyteInkTrap.className} text-5xl mb-5`} onClick={handleLinkClick}>Shop</a>
-                    <a href='#about' className={`${WhyteInkTrap.className} text-5xl`} onClick={handleLinkClick}>About</a>
+                    <Link href='#shop' className={`${WhyteInkTrap.className} text-5xl mb-5`} onClick={handleLinkClick}>Shop</Link>
+                    <Link href='#about' className={`${WhyteInkTrap.className} text-5xl`} onClick={handleLinkClick}>About</Link>
                     <div className='mt-14 flex flex-col gap-4 text-lg'>
-                        <a href="" onClick={handleLinkClick}>FAQ</a>
-                        <a href="" onClick={handleLinkClick}>Contact Us</a>
-                        <a href="" onClick={handleLinkClick}>Privacy Policy</a>
-                        <a href="" onClick={handleLinkClick}>Terms of Service</a>
-                        <a href="" onClick={handleLinkClick}>Account</a>
+                        <Link href="" onClick={handleLinkClick}>FAQ</Link>
+                        <Link href="" onClick={handleLinkClick}>Contact Us</Link>
+                        <Link href="" onClick={handleLinkClick}>Privacy Policy</Link>
+                        <Link href="" onClick={handleLinkClick}>Terms of Service</Link>
+                        <Link href="" onClick={handleLinkClick}>Account</Link>
                     </div>
                 </nav>
             </div>

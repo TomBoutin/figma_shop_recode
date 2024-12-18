@@ -56,7 +56,7 @@ export default function Home() {
           // animate={{ opacity: 1, translateY: 0 }}
           transition={{ delay: 0, duration: 0.2 }}>
             <span className="group-hover:opacity-60 transition-all">
-              Figma's
+              Figma&apos;s
             </span>{" "}
             <Image
               src="formes/word-symbol-burst.svg"

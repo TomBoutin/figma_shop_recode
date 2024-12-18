@@ -33,9 +33,9 @@ export default function CardProductLarge({ image, imageHover, title, price, nouv
     const [selectedPattern, setSelectedPattern] = useState<string | null>(null);
 
     useEffect(() => {
-        const randomPattern = patterns[Math.floor(Math.random() * patterns.length)];
-        setSelectedPattern(randomPattern);
-    }, []);
+            const randomPattern = patterns[Math.floor(Math.random() * patterns.length)];
+            setSelectedPattern(randomPattern);
+        }, [patterns]);
 
     return (
         <div className="w-full cursor-pointer group sm:col-span-2 mx-auto justify-items-center">
@@ -62,7 +62,7 @@ export default function CardProductLarge({ image, imageHover, title, price, nouv
                         alt={title}
                         width={1000}
                         height={1000}
-                        className="absolute inset-0 opacity-0 group-hover:opacity-100 transition-opacity duration-300 h-full w-full object-cover"
+                        className="absolute inset-0 opacity-0 group-hover:opacity-100 transition-opacity duration-300 h-full w-full object-cover self-center"
                     />
                 )}
             </div>

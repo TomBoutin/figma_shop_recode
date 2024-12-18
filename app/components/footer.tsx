@@ -91,9 +91,9 @@ export default function Footer() {
   const [selectedLogoIndex, setSelectedLogoIndex] = useState(0);
 
   useEffect(() => {
-    const randomIndex = Math.floor(Math.random() * logos.length);
-    setSelectedLogoIndex(randomIndex);
-  }, []);
+      const randomIndex = Math.floor(Math.random() * logos.length);
+      setSelectedLogoIndex(randomIndex);
+    }, [logos.length]);
 
   return (
     <>
@@ -150,7 +150,7 @@ export default function Footer() {
                     Certified B-Corporation.
                   </a>
                 </span>{" "}
-                For more information read Harper + Scott's{" "}
+                For more information read Harper + Scott&apos;s{" "}
                 <span className="font-semibold hover:text-blue-700">
                   <a
                     target="_blank"
@@ -186,7 +186,7 @@ export default function Footer() {
         </motion.a>
         <div className="text-2xl uppercase font-bold flex whitespace-nowrap items-center">
           <div className="animate-scroll-1 flex items-center absolute bottom-0">
-            <span className="leading-tight">Figma's</span>
+            <span className="leading-tight">Figma&apos;s</span>
 
             <svg className="inline-block mx-3 my-auto" width="23" height="18" viewBox="0 0 23 18" fill="none" xmlns="http://www.w3.org/2000/svg">
               <path d="M0.662109 17.3626V6.21266L6.23707 0.637695L15.9933 6.21266L22.962 0.637695V11.7876L15.9933 17.3626L6.23707 11.7876L0.662109 17.3626Z" fill="white"></path>
@@ -229,7 +229,7 @@ export default function Footer() {
               <path d="M0.662109 17.3626V6.21266L6.23707 0.637695L15.9933 6.21266L22.962 0.637695V11.7876L15.9933 17.3626L6.23707 11.7876L0.662109 17.3626Z" fill="white"></path>
             </svg>
           </div>
-          <div className="animate-scroll-2 flex items-center absolute  bottom-0">            <span className="leading-tight">Figma's</span>
+          <div className="animate-scroll-2 flex items-center absolute  bottom-0">            <span className="leading-tight">Figma&apos;s</span>
 
             <svg className="inline-block mx-3 my-auto" width="23" height="18" viewBox="0 0 23 18" fill="none" xmlns="http://www.w3.org/2000/svg">
               <path d="M0.662109 17.3626V6.21266L6.23707 0.637695L15.9933 6.21266L22.962 0.637695V11.7876L15.9933 17.3626L6.23707 11.7876L0.662109 17.3626Z" fill="white"></path>
